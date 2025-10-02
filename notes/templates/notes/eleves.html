@@ -1,0 +1,9 @@
+<!-- eleves.html -->
+<!-- eleves.html -->
+<h1>Liste des élèves</h1>
+<ul>
+  {% for eleve in eleves %}
+    <li><a href="{% url 'notes:eleve' eleve.id %}">{{ eleve.nom }} {{ eleve.prenom }}</a></li>
+  {% endfor %}
+</ul>
+
