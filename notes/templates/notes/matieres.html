@@ -1,16 +1,26 @@
 <!-- matieres.html -->
 <h1>Liste des matières</h1>
 
-<ul>
-  {% if matieres %}
 
-      <ul>
-        {% for matiere in matieres %}
-          <li><a href="{% url 'notes:matiere' matiere.id %}">{{ matiere.nom }}</a></li>
-        {% endfor %}
-      </ul>
 
-    {% else %}
-        <p>Aucune matière disponible.</p>
+<table border="2">
+  <tr>
+    <th>Nom</th>
+    <th>Voir plus</th>
+  </tr>
+   {% if matieres %}
+     {% for matiere in matieres%}
+        <tr>
+          <td>{{matiere.nom}}</td>
+          <td>
+            <a href="{% url 'notes:matiere' matiere.id %}">Détail</a>
+          </td>
+        </tr>
+      {% endfor %}
+   {% else  %}
+        <tr>
+          <td> Aucune matière disponible </td>
+          <td> Detail indisponible</td>
+        </tr>
     {% endif %}
-</ul>
+</table>

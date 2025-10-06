@@ -1,5 +1,18 @@
 <!-- eleve_detail.html -->
 <h1>Détail de l’élève</h1>
-<p>Nom : {{ eleve.nom }}</p>
-<p>Prénom : {{ eleve.prenom }}</p>
-<p>Niveau : {{ eleve.niveau }}</p>
+<table border="2">
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Sexe</th>
+    <th>Date de naissance</th>
+    <th>Niveau</th>
+  </tr>
+  <tr>  
+    <td>{{ eleve.nom }}</td>
+    <td>{{ eleve.prenom }}</td>
+    <td>{{ eleve.sexe }}</td>
+    <td>{{ eleve.date_naissance }}</td>
+    <td>{{ eleve.niveau }}</td>
+  </tr>
+</table>

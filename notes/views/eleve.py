@@ -11,3 +11,20 @@ def eleve(request, id) :
     #return HttpResponse(f"Ici, on affichera le détail de l'élève avec l'id {id}.") 
     eleve = get_object_or_404(Eleve, pk=id)
     return render(request, "notes/eleve.html", {"eleve": eleve})
+
+
+
+
+
+
+
+
+def elev(request,id ) :
+        elev=get_object_or_404(Eleve,pk=id) 
+        return render(request, 'notes/elev.html', {"elev" : elev})
+
+
+
+def elevves(request) :
+        elevves = Eleve.objects.all()
+        return render(request, 'notes/elevves.html' , {"elevves" : elevves})

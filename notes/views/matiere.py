@@ -4,8 +4,8 @@ from ..models import Matiere
 
 def matieres(request):
     matieres = Matiere.objects.all() 
-    print(matieres)
-    return render(request, "notes/matieres.html", {"matières": matieres})
+    #print(matieres)
+    return render(request, "notes/matieres.html", {"matieres": matieres})
     #return HttpResponse(f"Liste des matières : {matieres}")
 
 def matiere(request, id):

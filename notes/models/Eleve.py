@@ -7,4 +7,4 @@ class Eleve(Personne):
     niveau = models.ForeignKey(Niveau, on_delete=models.CASCADE)
     
     def __str__(self):
-        return f"{self.prenom} {self.nom}"
+        return f"{self.prenom} {self.nom} {self.sexe} {self.date_naissance} {self.niveau}"

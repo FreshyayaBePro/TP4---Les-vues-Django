@@ -1,9 +1,24 @@
 <!-- eleves.html -->
-<!-- eleves.html -->
-<h1>Liste des élèves</h1>
-<ul>
-  {% for eleve in eleves %}
-    <li><a href="{% url 'notes:eleve' eleve.id %}">{{ eleve.nom }} {{ eleve.prenom }}</a></li>
-  {% endfor %}
-</ul>
 
+<h1>Liste des élèves</h1>
+
+<table border="2">
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Voire plus</th>
+  </tr>
+  {% for eleve in eleves %}
+  <tr>
+     
+        <td>{{ eleve.nom }}</td>
+        <td>{{ eleve.prenom }}</td>
+        <td>
+          
+             <a href="{% url 'notes:eleve' eleve.id %}">Detail</a>
+          
+        </td>
+     
+    </tr>
+     {% endfor %}
+</table>
