@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import index, eleve, matiere, niveau
-
+from .views import stat_view
 app_name = "notes" 
 
 
@@ -12,7 +12,7 @@ urlpatterns = [
     path('matieres/', matiere.matieres, name="matieres"),
     path('matiere/<int:id>/', matiere.matiere, name="matiere"),
     path('niveau/<int:id>/', niveau.niveau, name="niveau"),
-   
+    path('statistiques', stat_view.statistiques, name="stat" )
 ]
 
 
